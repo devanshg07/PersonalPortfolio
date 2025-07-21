@@ -11,9 +11,10 @@
 
 	// Typewriter effect
 	const phrases = [
+		"My name is Devansh Goyal",
 		"I'm an avid machine learning devotee",
 		"I am a fullstack developer",
-		"I'm a computer engineering student at Queen's University",
+		"I'm a computer engineering student",
 		"I am an aspiring business leader",
 		"I enjoy working in collaborative environments"
 	];
@@ -126,25 +127,26 @@ main {
 .about-flex {
 	display: flex;
 	flex-direction: row;
-	align-items: flex-start;
-	gap: 2em;
+	align-items: center;
+	gap: 1em;
 }
 .about-left {
 	flex: 2;
 }
 .about-right {
-	flex: 1;
+	flex: 0 0 280px;
 	display: flex;
 	justify-content: flex-end;
-	align-items: flex-start;
+	align-items: center;
 }
 .profile-pic {
-	width: 180px;
-	height: 180px;
+	width: 280px;
+	height: 280px;
 	object-fit: cover;
 	border-radius: 50%;
 	border: 3px solid #ff3e00;
 	box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+	margin-left: -40px;
 }
 .typewriter {
 	font-size: 1.2em;
@@ -173,5 +175,15 @@ section:last-child {
 h2 {
 	color: #ff3e00;
 	margin-top: 0;
+	font-size: 3em;
+}
+.about-left h2 {
+	font-size: 3em;
+}
+.about-left .typewriter {
+	font-size: 2em;
+}
+.about-left p {
+	font-size: 1.5em;
 }
 </style>
