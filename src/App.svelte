@@ -224,7 +224,25 @@
 	</section>
 	<section id="hobbies">
 		<h2>Hobbies</h2>
-		<p>Share your hobbies and interests here.</p>
+		<div class="hobbies-belt">
+			<div class="bubble-belt-inner hobbies-belt-inner">
+				<span class="bubble">Coding</span>
+				<span class="bubble">Music</span>
+				<span class="bubble">Origami</span>
+				<span class="bubble">Soccer</span>
+				<span class="bubble">Badminton</span>
+				<span class="bubble">Doomscrolling</span>
+				<span class="bubble">Cooking</span>
+				<!-- Duplicate for seamless loop -->
+				<span class="bubble">Coding</span>
+				<span class="bubble">Music</span>
+				<span class="bubble">Origami</span>
+				<span class="bubble">Soccer</span>
+				<span class="bubble">Badminton</span>
+				<span class="bubble">Doomscrolling</span>
+				<span class="bubble">Cooking</span>
+			</div>
+		</div>
 	</section>
 	<section id="reachout">
 		<h2>Reach Out!</h2>
@@ -571,5 +589,17 @@ p, li, .exp-list, .exp-desc {
 }
 .project-card {
 	border-left: 6px solid #2ecc40;
+}
+.hobbies-belt {
+	overflow: hidden;
+	width: 100%;
+	margin: 2em 0 2.5em 0;
+	background: transparent;
+}
+.hobbies-belt-inner {
+	display: flex;
+	gap: 2em;
+	animation: conveyor-belt 18s linear infinite;
+	width: max-content;
 }
 </style>
