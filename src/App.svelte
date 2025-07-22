@@ -246,7 +246,12 @@
 	</section>
 	<section id="reachout">
 		<h2>Reach Out!</h2>
-		<p>Provide your contact info or a contact form here.</p>
+		<div class="reachout-links">
+			<a class="insta-link" href="https://instagram.com/devanshg07" target="_blank" rel="noopener">Instagram: @devanshg07</a>
+			<a class="github-link" href="https://github.com/devanshg07" target="_blank" rel="noopener">GitHub: devanshg07</a>
+			<a class="linkedin-link" href="https://www.linkedin.com/in/devanshg07" target="_blank" rel="noopener">LinkedIn: Devanshg07</a>
+			<a class="email-link" href="https://mail.google.com/mail/?view=cm&to=devanshgoyal087@gmail.com" target="_blank" rel="noopener">Email: devanshgoyal087@gmail.com</a>
+		</div>
 	</section>
 </main>
 
@@ -601,5 +606,75 @@ p, li, .exp-list, .exp-desc {
 	gap: 2em;
 	animation: conveyor-belt 18s linear infinite;
 	width: max-content;
+}
+.reachout-links {
+	margin-top: 1.5em;
+}
+.insta-link {
+	display: inline-block;
+	padding: 0.7em 1.5em;
+	background: linear-gradient(90deg, #fd5949 0%, #d6249f 50%, #285AEB 100%);
+	color: #fff;
+	font-weight: bold;
+	border-radius: 2em;
+	text-decoration: none;
+	font-size: 1.2em;
+	transition: box-shadow 0.18s, transform 0.18s;
+	box-shadow: 0 2px 8px rgba(0,0,0,0.10);
+}
+.insta-link:hover {
+	box-shadow: 0 6px 24px rgba(253,89,73,0.18), 0 1.5px 8px rgba(0,0,0,0.10);
+	transform: scale(1.08);
+}
+.github-link {
+	display: inline-block;
+	margin-left: 1em;
+	padding: 0.7em 1.5em;
+	background: linear-gradient(90deg, #333 0%, #6e5494 100%);
+	color: #fff;
+	font-weight: bold;
+	border-radius: 2em;
+	text-decoration: none;
+	font-size: 1.2em;
+	transition: box-shadow 0.18s, transform 0.18s;
+	box-shadow: 0 2px 8px rgba(0,0,0,0.10);
+}
+.github-link:hover {
+	box-shadow: 0 6px 24px rgba(110,84,148,0.18), 0 1.5px 8px rgba(0,0,0,0.10);
+	transform: scale(1.08);
+}
+.linkedin-link {
+	display: inline-block;
+	margin-left: 1em;
+	padding: 0.7em 1.5em;
+	background: linear-gradient(90deg, #0077b5 0%, #00c6ff 100%);
+	color: #fff;
+	font-weight: bold;
+	border-radius: 2em;
+	text-decoration: none;
+	font-size: 1.2em;
+	transition: box-shadow 0.18s, transform 0.18s;
+	box-shadow: 0 2px 8px rgba(0,0,0,0.10);
+}
+.linkedin-link:hover {
+	box-shadow: 0 6px 24px rgba(0,119,181,0.18), 0 1.5px 8px rgba(0,0,0,0.10);
+	transform: scale(1.08);
+}
+.email-link {
+	display: inline-block;
+	margin-left: 1em;
+	padding: 0.7em 1.5em;
+	background: linear-gradient(90deg, #ff5858 0%, #ffc371 100%);
+	color: #fff;
+	font-weight: bold;
+	border-radius: 2em;
+	text-decoration: none;
+	font-size: 1.2em;
+	transition: box-shadow 0.18s, transform 0.18s;
+	box-shadow: 0 2px 8px rgba(0,0,0,0.10);
+}
+.email-link:hover {
+	box-shadow: 0 6px 24px rgba(255,88,88,0.18), 0 1.5px 8px rgba(0,0,0,0.10);
+	transform: scale(1.08);
 }
 </style>
