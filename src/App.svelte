@@ -74,49 +74,153 @@
 	</section>
 	<section id="skills">
 		<h2>Technical Skills</h2>
-		<div class="bubble-container">
-			<span class="bubble">HTML</span>
-			<span class="bubble reverse">CSS</span>
-			<span class="bubble">JavaScript</span>
-			<span class="bubble reverse">Python</span>
-			<span class="bubble">Java</span>
-			<span class="bubble reverse">C++</span>
-			<span class="bubble">React.js</span>
-			<span class="bubble reverse">Node.js</span>
-			<span class="bubble">Svelte.js</span>
-			<span class="bubble reverse">TensorFlow</span>
-			<span class="bubble">PyTorch</span>
-			<span class="bubble reverse">NumPy</span>
-			<span class="bubble">Flask</span>
-			<span class="bubble reverse">Git</span>
-			<span class="bubble">OpenCV</span>
-			<span class="bubble reverse">Pandas</span>
+		<div class="skills-belt">
+			<div class="bubble-belt-inner">
+				<span class="bubble">HTML</span>
+				<span class="bubble reverse">CSS</span>
+				<span class="bubble">JavaScript</span>
+				<span class="bubble reverse">Python</span>
+				<span class="bubble">Java</span>
+				<span class="bubble reverse">C++</span>
+				<span class="bubble">React.js</span>
+				<span class="bubble reverse">Node.js</span>
+				<span class="bubble">Svelte.js</span>
+				<span class="bubble reverse">TensorFlow</span>
+				<span class="bubble">PyTorch</span>
+				<span class="bubble reverse">NumPy</span>
+				<span class="bubble">Flask</span>
+				<span class="bubble reverse">Git</span>
+				<span class="bubble">OpenCV</span>
+				<span class="bubble reverse">Pandas</span>
+				<!-- Duplicate for seamless loop -->
+				<span class="bubble">HTML</span>
+				<span class="bubble reverse">CSS</span>
+				<span class="bubble">JavaScript</span>
+				<span class="bubble reverse">Python</span>
+				<span class="bubble">Java</span>
+				<span class="bubble reverse">C++</span>
+				<span class="bubble">React.js</span>
+				<span class="bubble reverse">Node.js</span>
+				<span class="bubble">Svelte.js</span>
+				<span class="bubble reverse">TensorFlow</span>
+				<span class="bubble">PyTorch</span>
+				<span class="bubble reverse">NumPy</span>
+				<span class="bubble">Flask</span>
+				<span class="bubble reverse">Git</span>
+				<span class="bubble">OpenCV</span>
+				<span class="bubble reverse">Pandas</span>
+			</div>
 		</div>
 	</section>
 	<section id="experience">
 		<h2>Experience</h2>
-		<div class="exp-card">
-			<div class="exp-header">
-				<h3 class="exp-title">Software Engineer Intern</h3>
-				<span class="exp-dates">Jul 2024 - Aug 2024</span>
+		<div class="experience-flex">
+			<div class="exp-card">
+				<div class="exp-header">
+					<h3 class="exp-title">Machine Learning Intern</h3>
+					<span class="exp-dates">Jul 2024 - Aug 2024</span>
+				</div>
+				<h4 class="exp-company">CoolR Group</h4>
+				<ul class="exp-list">
+					<li>Developed and fine-tuned deep learning models (using PyTorch and TensorFlow) to automatically detect out-of-stock products and optimize inventory from images captured by IoT cameras in retail stores.</li>
+					<li>Collaborated with cross-functional teams to deploy ML models into production, integrating them with CoolR’s StoreAware SaaS platform for real-time analytics and actionable insight.</li>
+				</ul>
+				<div class="exp-bubbles">
+					<span class="exp-bubble">PyTorch</span>
+					<span class="exp-bubble">NumPy</span>
+					<span class="exp-bubble">TensorFlow</span>
+					<span class="exp-bubble">Python</span>
+				</div>
+				<a class="exp-link" href="https://coolrgroup.com" target="_blank" rel="noopener">Visit Website &rarr;</a>
 			</div>
-			<h4 class="exp-company">CoolR Group</h4>
-			<ul class="exp-list">
-				<li>Developed and fine-tuned deep learning models (using PyTorch and TensorFlow) to automatically detect out-of-stock products and optimize inventory from images captured by IoT cameras in retail stores.</li>
-				<li>Collaborated with cross-functional teams to deploy ML models into production, integrating them with CoolR’s StoreAware SaaS platform for real-time analytics and actionable insight.</li>
-			</ul>
-			<div class="exp-bubbles">
-				<span class="exp-bubble">PyTorch</span>
-				<span class="exp-bubble">NumPy</span>
-				<span class="exp-bubble">TensorFlow</span>
-				<span class="exp-bubble">Python</span>
+			<div class="exp-card shad-card right-card">
+				<div class="exp-header">
+					<h3 class="exp-title shad-title">Shad TMU Alum</h3>
+					<span class="exp-dates">July 2024</span>
+				</div>
+				<h4 class="exp-company">Shad Canada @ Toronto Metropolitan University</h4>
+				<ul class="exp-list">
+					<li>Designed and prototyped TempoBOT, a green energy thermostat system that reduces AC emissions and expenses by using outside air for cooling.</li>
+					<li>Gained hands-on experience in collaborative project development, technical design, and public speaking at a national STEM boot camp.</li>
+				</ul>
+				<div class="exp-bubbles">
+					<span class="exp-bubble">Collaboration</span>
+					<span class="exp-bubble">Leadership</span>
+					<span class="exp-bubble">Public Speaking</span>
+				</div>
+				<a class="exp-link" href="https://www.shad.ca/" target="_blank" rel="noopener">Visit Website &rarr;</a>
 			</div>
-			<a class="exp-link" href="https://coolrgroup.com" target="_blank" rel="noopener">Visit Website &rarr;</a>
 		</div>
 	</section>
 	<section id="projects">
 		<h2>Projects</h2>
-		<p>Showcase your favorite or most impressive projects here.</p>
+		<div class="projects-flex">
+			<div class="exp-card project-card">
+				<div class="exp-header">
+					<h3 class="exp-title project-title">Vanilla Neural Network</h3>
+				</div>
+				<ul class="exp-list">
+					<li>Built a neural network from scratch in Python using only basic math, without any machine learning libraries.</li>
+					<li>Learned the fundamentals of forward/backward propagation and gradients by implementing all computations manually.</li>
+				</ul>
+				<div class="exp-bubbles">
+					<span class="exp-bubble">Python</span>
+					<span class="exp-bubble">Math</span>
+					<span class="exp-bubble">Problem Solving</span>
+				</div>
+				<a class="exp-link" href="https://github.com/devanshg07/Vanilla-Neural-Network" target="_blank" rel="noopener">Visit Website &rarr;</a>
+			</div>
+			<div class="exp-card project-card">
+				<div class="exp-header">
+					<h3 class="exp-title project-title">LLM</h3>
+				</div>
+				<ul class="exp-list">
+					<li>Built a large language model from scratch using PyTorch, covering custom tokenization, model architecture, training, and text generation.</li>
+					<li>Faced challenges with data quality and model output, but learned a lot about the intricacies of LLMs and enjoyed the process.</li>
+				</ul>
+				<div class="exp-bubbles">
+					<span class="exp-bubble">PyTorch</span>
+					<span class="exp-bubble">Python</span>
+					<span class="exp-bubble">NLP</span>
+				</div>
+				<a class="exp-link" href="https://github.com/devanshg07/LLM" target="_blank" rel="noopener">Visit Website &rarr;</a>
+			</div>
+			<div class="exp-card project-card">
+				<div class="exp-header">
+					<h3 class="exp-title project-title">CiviClinic</h3>
+				</div>
+				<ul class="exp-list">
+					<li>Developed an AI-powered healthcare app that lets users check symptoms with GPT, scan wounds using computer vision, and get matched to doctors or clinics nearby.</li>
+					<li>Built a modern Flask app with instant health assessments, smart injury analysis, and an interactive care map using Python, machine learning, and real medical data.</li>
+				</ul>
+				<div class="exp-bubbles">
+					<span class="exp-bubble">TensorFlow</span>
+					<span class="exp-bubble">PyTorch</span>
+					<span class="exp-bubble">HTML</span>
+					<span class="exp-bubble">Python</span>
+					<span class="exp-bubble">SQL</span>
+					<span class="exp-bubble">APIs</span>
+					<span class="exp-bubble">Critical Thinking</span>
+				</div>
+				<a class="exp-link" href="https://github.com/devanshg07/CiviClinic" target="_blank" rel="noopener">Visit Website &rarr;</a>
+			</div>
+			<div class="exp-card project-card">
+				<div class="exp-header">
+					<h3 class="exp-title project-title">GrowTogether</h3>
+				</div>
+				<ul class="exp-list">
+					<li>Developed a gamified urban gardening app that lets users track, update, and donate plants, earn points, and get AI-powered crop recommendations.</li>
+					<li>Built a modern Flask app with leaderboard, map, and community features using Python, SQLAlchemy, and real gardening data.</li>
+				</ul>
+				<div class="exp-bubbles">
+					<span class="exp-bubble">Python</span>
+					<span class="exp-bubble">HTML</span>
+					<span class="exp-bubble">CSS</span>
+					<span class="exp-bubble">SQL</span>
+				</div>
+				<a class="exp-link" href="https://github.com/devanshg07/GrowTogether" target="_blank" rel="noopener">Visit Website &rarr;</a>
+			</div>
+		</div>
 	</section>
 	<section id="hobbies">
 		<h2>Hobbies</h2>
@@ -250,26 +354,14 @@ h2 {
 	border-radius: 0.18em;
 	font-size: 2em;
 	font-weight: bold;
-	width: 100%;
+	width: 220px;
 	min-height: 2.2em;
 	transition: transform 0.18s cubic-bezier(0.4, 0.2, 0.2, 1), box-shadow 0.18s cubic-bezier(0.4, 0.2, 0.2, 1);
-	animation: bubble-rotate 4s linear infinite;
-	box-shadow: 0 1px 4px rgba(0,0,0,0.06);
-}
-.bubble.reverse {
-	animation: bubble-rotate-reverse 4s linear infinite;
-}
-@keyframes bubble-rotate {
-	0% { transform: rotate(0deg); }
-	100% { transform: rotate(360deg); }
-}
-@keyframes bubble-rotate-reverse {
-	0% { transform: rotate(0deg); }
-	100% { transform: rotate(-360deg); }
+	box-shadow: 0 1px 8px rgba(0,0,0,0.10);
+	/* Remove animation and rotation */
 }
 .bubble:hover {
-	transform: scale(1.15) rotate(0deg) !important;
-	box-shadow: 0 6px 24px rgba(255,62,0,0.18), 0 1.5px 8px rgba(0,0,0,0.10);
+	transform: scale(1.12);
 	z-index: 2;
 }
 .exp-card {
@@ -280,7 +372,8 @@ h2 {
 	box-shadow: 0 0 16px 0 #e0e0e0;
 	padding: 2.2em 2em 2em 2em;
 	margin: 2em 0 2.5em 0;
-	max-width: 600px;
+	width: 500px;
+	max-width: 90vw;
 }
 .exp-header {
 	display: flex;
@@ -377,50 +470,106 @@ body {
 	background: #1976d2;
 	color: #fff;
 }
+.shad-title {
+	color: #e17055;
+}
+.shad-card {
+	border-left: 6px solid #e17055;
+}
 
-/* Fun, multi-colored skill bubbles */
-.bubble-container .bubble:nth-child(4n+1) {
-	background: #ffe5e0;
-	color: #ff3e00;
-	border-color: #ff3e00;
+/* Fun, multi-colored skill bubbles for the belt */
+.bubble-belt-inner .bubble:nth-child(8n+1) {
+	background: #ffb3ba;
+	color: #fff;
+	border: 2.5px solid #ff3e00;
 }
-.bubble-container .bubble:nth-child(4n+2) {
-	background: #e0f0ff;
+.bubble-belt-inner .bubble:nth-child(8n+2) {
+	background: #bae1ff;
 	color: #1976d2;
-	border-color: #1976d2;
+	border: 2.5px solid #1976d2;
 }
-.bubble-container .bubble:nth-child(4n+3) {
-	background: #f3e0ff;
-	color: #a259e6;
-	border-color: #a259e6;
-}
-.bubble-container .bubble:nth-child(4n) {
-	background: #eaffea;
+.bubble-belt-inner .bubble:nth-child(8n+3) {
+	background: #baffc9;
 	color: #2ecc40;
-	border-color: #2ecc40;
+	border: 2.5px solid #2ecc40;
 }
-.bubble {
-	display: flex;
-	align-items: center;
-	justify-content: center;
-	padding: 1.2em 0;
-	border-radius: 0.18em;
-	font-size: 2em;
-	font-weight: bold;
+.bubble-belt-inner .bubble:nth-child(8n+4) {
+	background: #ffffba;
+	color: #e17055;
+	border: 2.5px solid #e17055;
+}
+.bubble-belt-inner .bubble:nth-child(8n+5) {
+	background: #e0bbff;
+	color: #a259e6;
+	border: 2.5px solid #a259e6;
+}
+.bubble-belt-inner .bubble:nth-child(8n+6) {
+	background: #ffd6ba;
+	color: #ff3e00;
+	border: 2.5px solid #ff3e00;
+}
+.bubble-belt-inner .bubble:nth-child(8n+7) {
+	background: #c9fff4;
+	color: #00b894;
+	border: 2.5px solid #00b894;
+}
+.bubble-belt-inner .bubble:nth-child(8n) {
+	background: #f7b731;
+	color: #fff;
+	border: 2.5px solid #f7b731;
+}
+.skills-belt {
+	overflow: hidden;
 	width: 100%;
-	min-height: 2.2em;
-	transition: transform 0.18s cubic-bezier(0.4, 0.2, 0.2, 1), box-shadow 0.18s cubic-bezier(0.4, 0.2, 0.2, 1);
-	animation: bubble-rotate 4s linear infinite;
-	box-shadow: 0 1px 4px rgba(0,0,0,0.06);
+	margin: 2em 0 2.5em 0;
+	background: transparent;
 }
-.bubble:hover {
-	transform: scale(1.15) rotate(0deg) !important;
-	box-shadow: 0 6px 24px rgba(255,62,0,0.18), 0 1.5px 8px rgba(0,0,0,0.10);
-	z-index: 2;
+.bubble-belt-inner {
+	display: flex;
+	gap: 2em;
+	animation: conveyor-belt 22s linear infinite;
+	width: max-content;
+}
+@keyframes conveyor-belt {
+	0% { transform: translateX(0); }
+	100% { transform: translateX(-50%); }
 }
 
 /* Keep text readable */
 p, li, .exp-list, .exp-desc {
 	color: #222;
+}
+.experience-flex {
+	display: flex;
+	gap: 2em;
+	flex-wrap: wrap;
+	align-items: flex-start;
+	justify-content: center;
+}
+.right-card {
+	/* margin-left: auto; removed for alignment */
+}
+@media (max-width: 1100px) {
+	.experience-flex {
+		flex-direction: column;
+		align-items: center;
+	}
+	.exp-card {
+		width: 95vw;
+		max-width: 600px;
+	}
+}
+.projects-flex {
+	display: flex;
+	gap: 2em;
+	flex-wrap: wrap;
+	align-items: flex-start;
+	justify-content: center;
+}
+.project-title {
+	color: #2ecc40;
+}
+.project-card {
+	border-left: 6px solid #2ecc40;
 }
 </style>
