@@ -3,7 +3,7 @@
 	// No props needed for now
 	const sections = [
 		{ id: 'about', label: 'About' },
-		{ id: 'skills', label: 'Technical Skills' },
+		{ id: 'skills', label: 'Skills' },
 		{ id: 'experience', label: 'Experience' },
 		{ id: 'projects', label: 'Projects' },
 		{ id: 'hobbies', label: 'Hobbies' },
@@ -53,6 +53,9 @@
 	});
 </script>
 
+<!-- Google Fonts -->
+<link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;700;900&display=swap" rel="stylesheet">
+
 <nav>
 	<ul>
 		{#each sections as section}
@@ -92,6 +95,10 @@
 				<span class="bubble reverse">Git</span>
 				<span class="bubble">OpenCV</span>
 				<span class="bubble reverse">Pandas</span>
+				<span class="bubble">Critical Thinking</span>
+				<span class="bubble">Problem Solving</span>
+				<span class="bubble">Curiousity</span>
+				<span class="bubble">Collaboration</span>
 				<!-- Duplicate for seamless loop -->
 				<span class="bubble">HTML</span>
 				<span class="bubble reverse">CSS</span>
@@ -109,6 +116,10 @@
 				<span class="bubble reverse">Git</span>
 				<span class="bubble">OpenCV</span>
 				<span class="bubble reverse">Pandas</span>
+				<span class="bubble">Critical Thinking</span>
+				<span class="bubble">Problem Solving</span>
+				<span class="bubble">Curiousity</span>
+				<span class="bubble">Collaboration</span>
 			</div>
 		</div>
 	</section>
@@ -172,7 +183,7 @@
 			</div>
 			<div class="exp-card project-card">
 				<div class="exp-header">
-					<h3 class="exp-title project-title">LLM</h3>
+					<h3 class="exp-title project-title">LLM from Scratch</h3>
 				</div>
 				<ul class="exp-list">
 					<li>Built a large language model from scratch using PyTorch, covering custom tokenization, model architecture, training, and text generation.</li>
@@ -233,6 +244,7 @@
 				<span class="bubble">Badminton</span>
 				<span class="bubble">Doomscrolling</span>
 				<span class="bubble">Cooking</span>
+				<span class="bubble">Building</span>
 				<!-- Duplicate for seamless loop -->
 				<span class="bubble">Coding</span>
 				<span class="bubble">Music</span>
@@ -241,6 +253,7 @@
 				<span class="bubble">Badminton</span>
 				<span class="bubble">Doomscrolling</span>
 				<span class="bubble">Cooking</span>
+				<span class="bubble">Building</span>
 			</div>
 		</div>
 	</section>
@@ -279,10 +292,15 @@ nav a {
 	font-weight: bold;
 	text-decoration: none;
 	font-size: 2.5em;
-	transition: color 0.2s;
+	transition: color 0.2s, box-shadow 0.22s, transform 0.22s, background 0.22s;
+	border-radius: 0.5em;
+	padding: 0.1em 0.4em;
 }
-nav a:hover {
-	color: #333;
+nav a:hover, nav a:focus {
+	color: #a259e6;
+	background: #fff6;
+	box-shadow: 0 4px 24px #a259e644;
+	transform: scale(1.08) rotate(-2deg);
 }
 main {
 	max-width: none;
@@ -374,29 +392,39 @@ h2 {
 	align-items: center;
 	justify-content: center;
 	padding: 1.2em 0;
-	border-radius: 0.18em;
+	border-radius: 1.2em;
 	font-size: 2em;
 	font-weight: bold;
 	width: 220px;
 	min-height: 2.2em;
-	transition: transform 0.18s cubic-bezier(0.4, 0.2, 0.2, 1), box-shadow 0.18s cubic-bezier(0.4, 0.2, 0.2, 1);
-	box-shadow: 0 1px 8px rgba(0,0,0,0.10);
-	/* Remove animation and rotation */
+	transition: transform 0.18s cubic-bezier(0.4, 0.2, 0.2, 1), box-shadow 0.18s cubic-bezier(0.4, 0.2, 0.2, 1), background 0.18s;
+	box-shadow: 0 2px 16px 0 rgba(31,38,135,0.13);
+	background: rgba(255,255,255,0.85);
+	backdrop-filter: blur(8px) saturate(1.2);
+	border: 2.5px solid #fff6;
+	margin-bottom: 0.5em;
 }
 .bubble:hover {
-	transform: scale(1.12);
+	transform: scale(1.13) rotate(-3deg);
 	z-index: 2;
+	box-shadow: 0 8px 32px 0 #a259e644, 0 2px 16px 0 #ff3e0044;
+	background: linear-gradient(120deg, #fff6, #ffd6ba 80%);
 }
-.exp-card {
-	background: #f5f6fa;
-	color: #222;
-	border-radius: 16px;
-	border: 1.5px solid #d1d5db;
-	box-shadow: 0 0 16px 0 #e0e0e0;
+.exp-card, .project-card, .shad-card {
+	background: rgba(255,255,255,0.82);
+	backdrop-filter: blur(16px) saturate(1.2);
+	box-shadow: 0 8px 32px 0 rgba(31,38,135,0.13), 0 2px 8px 0 #a259e622;
+	border-radius: 28px;
+	border: 1.5px solid #e0e0e0;
 	padding: 2.2em 2em 2em 2em;
 	margin: 2em 0 2.5em 0;
 	width: 500px;
 	max-width: 90vw;
+	transition: box-shadow 0.25s, transform 0.22s;
+}
+.exp-card:hover, .project-card:hover, .shad-card:hover {
+	box-shadow: 0 16px 48px 0 rgba(31,38,135,0.22), 0 4px 24px 0 #a259e644;
+	transform: translateY(-8px) scale(1.025) rotate(-1deg);
 }
 .exp-header {
 	display: flex;
@@ -454,16 +482,36 @@ h2 {
 	margin-bottom: 0.5em;
 }
 body {
-	background: linear-gradient(135deg, #f8fafc 0%, #fbeee6 100%);
+	font-family: 'Nunito', Arial, sans-serif;
+	font-size: 1.1em;
+	line-height: 1.7;
+	margin: 0;
+	padding: 0;
+	background: #f8fafc;
+}
+h1, h2, h3, h4, h5, h6 {
+	font-family: 'Nunito', Arial, sans-serif;
+	font-weight: 900;
+	margin-top: 0.7em;
+	margin-bottom: 0.5em;
+	letter-spacing: 0.01em;
+}
+p, li {
+	font-family: 'Nunito', Arial, sans-serif;
+	font-size: 1.1em;
+	margin-bottom: 1em;
+	color: #222;
 }
 
 /* Section heading colors */
-#about h2 { color: #ff3e00; }
-#skills h2 { color: #1976d2; }
-#experience h2 { color: #a259e6; }
-#projects h2 { color: #2ecc40; }
-#hobbies h2 { color: #f7b731; }
-#reachout h2 { color: #e17055; }
+section h2 {
+	background: linear-gradient(90deg, #ff3e00 0%, #ffd6ba 20%, #1976d2 40%, #bae1ff 50%, #a259e6 60%, #f3e0ff 70%, #2ecc40 80%, #baffc9 90%, #f7b731 95%, #e17055 100%);
+	-webkit-background-clip: text;
+	-webkit-text-fill-color: transparent;
+	font-size: 3em;
+	font-weight: 900;
+	margin-bottom: 0.5em;
+}
 
 /* Experience card tweaks for fun */
 .exp-card {
@@ -501,45 +549,45 @@ body {
 }
 
 /* Fun, multi-colored skill bubbles for the belt */
-.bubble-belt-inner .bubble:nth-child(8n+1) {
-	background: #ffb3ba;
-	color: #fff;
-	border: 2.5px solid #ff3e00;
-}
-.bubble-belt-inner .bubble:nth-child(8n+2) {
-	background: #bae1ff;
-	color: #1976d2;
-	border: 2.5px solid #1976d2;
-}
-.bubble-belt-inner .bubble:nth-child(8n+3) {
-	background: #baffc9;
-	color: #2ecc40;
-	border: 2.5px solid #2ecc40;
-}
-.bubble-belt-inner .bubble:nth-child(8n+4) {
-	background: #ffffba;
-	color: #e17055;
-	border: 2.5px solid #e17055;
-}
-.bubble-belt-inner .bubble:nth-child(8n+5) {
-	background: #e0bbff;
-	color: #a259e6;
-	border: 2.5px solid #a259e6;
-}
-.bubble-belt-inner .bubble:nth-child(8n+6) {
-	background: #ffd6ba;
+.bubble-belt-inner .bubble:nth-child(8n+1), .hobbies-belt-inner .bubble:nth-child(7n+1) {
+	background: linear-gradient(135deg, #ffb3ba 0%, #ffd6ba 100%);
 	color: #ff3e00;
-	border: 2.5px solid #ff3e00;
+	border-color: #ff3e00;
 }
-.bubble-belt-inner .bubble:nth-child(8n+7) {
-	background: #c9fff4;
+.bubble-belt-inner .bubble:nth-child(8n+2), .hobbies-belt-inner .bubble:nth-child(7n+2) {
+	background: linear-gradient(135deg, #bae1ff 0%, #e0f0ff 100%);
+	color: #1976d2;
+	border-color: #1976d2;
+}
+.bubble-belt-inner .bubble:nth-child(8n+3), .hobbies-belt-inner .bubble:nth-child(7n+3) {
+	background: linear-gradient(135deg, #baffc9 0%, #eaffea 100%);
+	color: #2ecc40;
+	border-color: #2ecc40;
+}
+.bubble-belt-inner .bubble:nth-child(8n+4), .hobbies-belt-inner .bubble:nth-child(7n+4) {
+	background: linear-gradient(135deg, #ffffba 0%, #fff6 100%);
+	color: #e17055;
+	border-color: #e17055;
+}
+.bubble-belt-inner .bubble:nth-child(8n+5), .hobbies-belt-inner .bubble:nth-child(7n+5) {
+	background: linear-gradient(135deg, #e0bbff 0%, #f3e0ff 100%);
+	color: #a259e6;
+	border-color: #a259e6;
+}
+.bubble-belt-inner .bubble:nth-child(8n+6), .hobbies-belt-inner .bubble:nth-child(7n+6) {
+	background: linear-gradient(135deg, #ffd6ba 0%, #ffe5e0 100%);
+	color: #ff3e00;
+	border-color: #ff3e00;
+}
+.bubble-belt-inner .bubble:nth-child(8n+7), .hobbies-belt-inner .bubble:nth-child(7n) {
+	background: linear-gradient(135deg, #c9fff4 0%, #e0f0ff 100%);
 	color: #00b894;
-	border: 2.5px solid #00b894;
+	border-color: #00b894;
 }
-.bubble-belt-inner .bubble:nth-child(8n) {
-	background: #f7b731;
+.bubble-belt-inner .bubble:nth-child(8n), .hobbies-belt-inner .bubble:nth-child(7n+7) {
+	background: linear-gradient(135deg, #f7b731 0%, #fff6 100%);
 	color: #fff;
-	border: 2.5px solid #f7b731;
+	border-color: #f7b731;
 }
 .skills-belt {
 	overflow: hidden;
@@ -610,71 +658,49 @@ p, li, .exp-list, .exp-desc {
 .reachout-links {
 	margin-top: 1.5em;
 }
-.insta-link {
+.insta-link, .github-link, .linkedin-link, .email-link {
 	display: inline-block;
+	margin-left: 1em;
 	padding: 0.7em 1.5em;
-	background: linear-gradient(90deg, #fd5949 0%, #d6249f 50%, #285AEB 100%);
 	color: #fff;
 	font-weight: bold;
 	border-radius: 2em;
 	text-decoration: none;
 	font-size: 1.2em;
-	transition: box-shadow 0.18s, transform 0.18s;
+	transition: box-shadow 0.22s, transform 0.22s, background 0.22s, color 0.22s;
 	box-shadow: 0 2px 8px rgba(0,0,0,0.10);
+	cursor: pointer;
 }
-.insta-link:hover {
+.insta-link {
+	background: linear-gradient(90deg, #fd5949 0%, #d6249f 50%, #285AEB 100%);
+}
+.insta-link:hover, .insta-link:focus {
 	box-shadow: 0 6px 24px rgba(253,89,73,0.18), 0 1.5px 8px rgba(0,0,0,0.10);
-	transform: scale(1.08);
+	transform: scale(1.08) rotate(-2deg);
+	background: linear-gradient(90deg, #285AEB 0%, #fd5949 100%);
 }
 .github-link {
-	display: inline-block;
-	margin-left: 1em;
-	padding: 0.7em 1.5em;
 	background: linear-gradient(90deg, #333 0%, #6e5494 100%);
-	color: #fff;
-	font-weight: bold;
-	border-radius: 2em;
-	text-decoration: none;
-	font-size: 1.2em;
-	transition: box-shadow 0.18s, transform 0.18s;
-	box-shadow: 0 2px 8px rgba(0,0,0,0.10);
 }
-.github-link:hover {
+.github-link:hover, .github-link:focus {
 	box-shadow: 0 6px 24px rgba(110,84,148,0.18), 0 1.5px 8px rgba(0,0,0,0.10);
-	transform: scale(1.08);
+	transform: scale(1.08) rotate(-2deg);
+	background: linear-gradient(90deg, #6e5494 0%, #333 100%);
 }
 .linkedin-link {
-	display: inline-block;
-	margin-left: 1em;
-	padding: 0.7em 1.5em;
 	background: linear-gradient(90deg, #0077b5 0%, #00c6ff 100%);
-	color: #fff;
-	font-weight: bold;
-	border-radius: 2em;
-	text-decoration: none;
-	font-size: 1.2em;
-	transition: box-shadow 0.18s, transform 0.18s;
-	box-shadow: 0 2px 8px rgba(0,0,0,0.10);
 }
-.linkedin-link:hover {
+.linkedin-link:hover, .linkedin-link:focus {
 	box-shadow: 0 6px 24px rgba(0,119,181,0.18), 0 1.5px 8px rgba(0,0,0,0.10);
-	transform: scale(1.08);
+	transform: scale(1.08) rotate(-2deg);
+	background: linear-gradient(90deg, #00c6ff 0%, #0077b5 100%);
 }
 .email-link {
-	display: inline-block;
-	margin-left: 1em;
-	padding: 0.7em 1.5em;
 	background: linear-gradient(90deg, #ff5858 0%, #ffc371 100%);
-	color: #fff;
-	font-weight: bold;
-	border-radius: 2em;
-	text-decoration: none;
-	font-size: 1.2em;
-	transition: box-shadow 0.18s, transform 0.18s;
-	box-shadow: 0 2px 8px rgba(0,0,0,0.10);
 }
-.email-link:hover {
+.email-link:hover, .email-link:focus {
 	box-shadow: 0 6px 24px rgba(255,88,88,0.18), 0 1.5px 8px rgba(0,0,0,0.10);
-	transform: scale(1.08);
+	transform: scale(1.08) rotate(-2deg);
+	background: linear-gradient(90deg, #ffc371 0%, #ff5858 100%);
 }
 </style>
