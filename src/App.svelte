@@ -48,13 +48,30 @@
 		}
 	}
 
+	let darkMode = false;
+
 	onMount(() => {
+		darkMode = localStorage.getItem('darkMode') === 'true';
+		if (darkMode) document.body.classList.add('dark-mode');
 		typeWriter();
 	});
+
+	function toggleDarkMode() {
+		darkMode = !darkMode;
+		if (darkMode) {
+			document.body.classList.add('dark-mode');
+			localStorage.setItem('darkMode', 'true');
+		} else {
+			document.body.classList.remove('dark-mode');
+			localStorage.setItem('darkMode', 'false');
+		}
+	}
 </script>
 
 <!-- Google Fonts -->
 <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;700;900&display=swap" rel="stylesheet">
+<!-- Font Awesome CDN -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" />
 
 <nav>
 	<ul>
@@ -62,69 +79,54 @@
 			<li><a href={'#' + section.id}>{section.label}</a></li>
 		{/each}
 	</ul>
+	<button class="theme-toggle" on:click={toggleDarkMode} aria-label="Toggle light/dark mode">
+		{#if darkMode}
+			<i class="fa-solid fa-sun"></i>
+		{:else}
+			<i class="fa-solid fa-moon"></i>
+		{/if}
+	</button>
 </nav>
 
 <main>
-	<section id="about" class="about-flex">
-		<div class="about-left">
-			<h2>About</h2>
-			<p class="typewriter">{displayText}<span class="cursor">|</span></p>
-			<p>Hey! My name is Devansh Goyal, and welcome to my site! I study Computer Engineering at Queen's University and am originally from Mississauga, Ontario. I have experience in software development, with an aptitude in the field of machine learning. I have an ever-growing interest in hardware, and I aspire to build technical projects that integrate both fields of hardware and software. I enjoy experimenting with new technologies in the world of engineering and building impactful projects that have a positive impact on society. I am always interested in collaboration-based projects, which is why I consistently attend hackathons. I love visiting hackathons as it pushes me to my utter limits while making new, long-lasting friends and memories. I'm always down to working with new people, if you are interested in collaborating or simply want to have a chat, please reach out!</p>
-		</div>
-		<div class="about-right">
-			<img class="profile-pic" src="/devanshpic.png" alt="Profile Picture" />
+	<section id="about">
+		<h2><i class="fa-solid fa-user fa-fw section-icon"></i> About</h2>
+		<div class="about-flex">
+			<div class="about-left">
+				<p class="typewriter">{displayText}<span class="cursor">|</span></p>
+				<p>Hey! My name is Devansh Goyal, and welcome to my site! I study Computer Engineering at Queen's University and am originally from Mississauga, Ontario. I have experience in software development, with an aptitude in the field of machine learning. I have an ever-growing interest in hardware, and I aspire to build technical projects that integrate both fields of hardware and software. I enjoy experimenting with new technologies in the world of engineering and building impactful projects that have a positive impact on society. I am always interested in collaboration-based projects, which is why I consistently attend hackathons. I love visiting hackathons as it pushes me to my utter limits while making new, long-lasting friends and memories. I'm always down to working with new people, if you are interested in collaborating or simply want to have a chat, please reach out!</p>
+			</div>
+			<div class="about-right">
+				<img class="profile-pic" src="/devanshpic.png" alt="Profile Picture" />
+			</div>
 		</div>
 	</section>
 	<section id="skills">
-		<h2>Technical Skills</h2>
+		<h2><i class="fa-solid fa-lightbulb fa-fw section-icon"></i> Technical Skills</h2>
 		<div class="skills-belt">
 			<div class="bubble-belt-inner">
-				<span class="bubble">HTML</span>
-				<span class="bubble reverse">CSS</span>
-				<span class="bubble">JavaScript</span>
-				<span class="bubble reverse">Python</span>
-				<span class="bubble">Java</span>
-				<span class="bubble reverse">C++</span>
-				<span class="bubble">React.js</span>
-				<span class="bubble reverse">Node.js</span>
-				<span class="bubble">Svelte.js</span>
-				<span class="bubble reverse">TensorFlow</span>
-				<span class="bubble">PyTorch</span>
-				<span class="bubble reverse">NumPy</span>
-				<span class="bubble">Flask</span>
-				<span class="bubble reverse">Git</span>
-				<span class="bubble">OpenCV</span>
-				<span class="bubble reverse">Pandas</span>
-				<span class="bubble">Critical Thinking</span>
-				<span class="bubble">Problem Solving</span>
-				<span class="bubble">Curiousity</span>
-				<span class="bubble">Collaboration</span>
-				<!-- Duplicate for seamless loop -->
-				<span class="bubble">HTML</span>
-				<span class="bubble reverse">CSS</span>
-				<span class="bubble">JavaScript</span>
-				<span class="bubble reverse">Python</span>
-				<span class="bubble">Java</span>
-				<span class="bubble reverse">C++</span>
-				<span class="bubble">React.js</span>
-				<span class="bubble reverse">Node.js</span>
-				<span class="bubble">Svelte.js</span>
-				<span class="bubble reverse">TensorFlow</span>
-				<span class="bubble">PyTorch</span>
-				<span class="bubble reverse">NumPy</span>
-				<span class="bubble">Flask</span>
-				<span class="bubble reverse">Git</span>
-				<span class="bubble">OpenCV</span>
-				<span class="bubble reverse">Pandas</span>
-				<span class="bubble">Critical Thinking</span>
-				<span class="bubble">Problem Solving</span>
-				<span class="bubble">Curiousity</span>
-				<span class="bubble">Collaboration</span>
+				<span class="bubble"><i class="fa-brands fa-python"></i> Python</span>
+				<span class="bubble"><i class="fa-brands fa-html5"></i> HTML</span>
+				<span class="bubble"><i class="fa-brands fa-css3-alt"></i> CSS</span>
+				<span class="bubble"><i class="fa-solid fa-brain"></i> Critical Thinking</span>
+				<span class="bubble"><i class="fa-solid fa-code"></i> Problem Solving</span>
+				<span class="bubble"><i class="fa-solid fa-lightbulb"></i> Curiousity</span>
+				<span class="bubble"><i class="fa-solid fa-users"></i> Collaboration</span>
+				<span class="bubble"><i class="fa-brands fa-react"></i> React.js</span>
+				<span class="bubble"><i class="fa-brands fa-node-js"></i> Node.js</span>
+				<span class="bubble"><i class="fa-brands fa-svelte"></i> Svelte.js</span>
+				<span class="bubble"><i class="fa-brands fa-tensorflow"></i> TensorFlow</span>
+				<span class="bubble"><i class="fa-brands fa-pytorch"></i> PyTorch</span>
+				<span class="bubble"><i class="fa-brands fa-numpy"></i> NumPy</span>
+				<span class="bubble"><i class="fa-brands fa-flask"></i> Flask</span>
+				<span class="bubble"><i class="fa-brands fa-git-alt"></i> Git</span>
+				<span class="bubble"><i class="fa-brands fa-opencv"></i> OpenCV</span>
+				<span class="bubble"><i class="fa-brands fa-pandas"></i> Pandas</span>
 			</div>
 		</div>
 	</section>
 	<section id="experience">
-		<h2>Experience</h2>
+		<h2><i class="fa-solid fa-briefcase fa-fw section-icon"></i> Experience</h2>
 		<div class="experience-flex">
 			<div class="exp-card">
 				<div class="exp-header">
@@ -164,7 +166,7 @@
 		</div>
 	</section>
 	<section id="projects">
-		<h2>Projects</h2>
+		<h2><i class="fa-solid fa-code fa-fw section-icon"></i> Projects</h2>
 		<div class="projects-flex">
 			<div class="exp-card project-card">
 				<div class="exp-header">
@@ -234,31 +236,21 @@
 		</div>
 	</section>
 	<section id="hobbies">
-		<h2>Hobbies</h2>
+		<h2><i class="fa-solid fa-heart fa-fw section-icon"></i> Hobbies</h2>
 		<div class="hobbies-belt">
 			<div class="bubble-belt-inner hobbies-belt-inner">
-				<span class="bubble">Coding</span>
-				<span class="bubble">Music</span>
-				<span class="bubble">Origami</span>
-				<span class="bubble">Soccer</span>
-				<span class="bubble">Badminton</span>
-				<span class="bubble">Doomscrolling</span>
-				<span class="bubble">Cooking</span>
-				<span class="bubble">Building</span>
-				<!-- Duplicate for seamless loop -->
-				<span class="bubble">Coding</span>
-				<span class="bubble">Music</span>
-				<span class="bubble">Origami</span>
-				<span class="bubble">Soccer</span>
-				<span class="bubble">Badminton</span>
-				<span class="bubble">Doomscrolling</span>
-				<span class="bubble">Cooking</span>
-				<span class="bubble">Building</span>
+				<span class="bubble"><i class="fa-solid fa-music"></i> Music</span>
+				<span class="bubble"><i class="fa-solid fa-futbol"></i> Soccer</span>
+				<span class="bubble"><i class="fa-solid fa-code"></i> Coding</span>
+				<span class="bubble"><i class="fa-solid fa-palette"></i> Origami</span>
+				<span class="bubble"><i class="fa-solid fa-dumbbell"></i> Badminton</span>
+				<span class="bubble"><i class="fa-solid fa-gamepad"></i> Doomscrolling</span>
+				<span class="bubble"><i class="fa-solid fa-utensils"></i> Cooking</span>
 			</div>
 		</div>
 	</section>
 	<section id="reachout">
-		<h2>Reach Out!</h2>
+		<h2><i class="fa-solid fa-paper-plane fa-fw section-icon"></i> Reach Out!</h2>
 		<div class="reachout-links">
 			<a class="insta-link" href="https://instagram.com/devanshg07" target="_blank" rel="noopener">Instagram: @devanshg07</a>
 			<a class="github-link" href="https://github.com/devanshg07" target="_blank" rel="noopener">GitHub: devanshg07</a>
@@ -329,8 +321,17 @@ main {
 	object-fit: cover;
 	border-radius: 50%;
 	border: 3px solid #ff3e00;
-	box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+	box-shadow: 0 2px 24px 0 #ff3e0044, 0 0 0 0 #a259e644;
 	margin-left: -40px;
+	animation: profile-float 4.5s ease-in-out infinite alternate, profile-glow 2.5s ease-in-out infinite alternate;
+}
+@keyframes profile-float {
+	0% { transform: translateY(0); }
+	100% { transform: translateY(-18px); }
+}
+@keyframes profile-glow {
+	0% { box-shadow: 0 2px 24px 0 #ff3e0044, 0 0 0 0 #a259e644; }
+	100% { box-shadow: 0 8px 48px 0 #ff3e00aa, 0 0 32px 8px #a259e688; }
 }
 .typewriter {
 	font-size: 1.2em;
@@ -342,11 +343,16 @@ main {
 .cursor {
 	display: inline-block;
 	width: 1ch;
-	animation: blink 1s steps(1) infinite;
+	animation: blink 1s steps(1) infinite, bounce 0.7s cubic-bezier(0.4,0.2,0.2,1) infinite alternate;
+	vertical-align: bottom;
 }
 @keyframes blink {
 	0%, 50% { opacity: 1; }
 	51%, 100% { opacity: 0; }
+}
+@keyframes bounce {
+	0% { transform: translateY(0); }
+	100% { transform: translateY(-0.25em); }
 }
 section {
 	margin-bottom: 3em;
@@ -393,7 +399,7 @@ h2 {
 	justify-content: center;
 	padding: 1.2em 0;
 	border-radius: 1.2em;
-	font-size: 2em;
+	font-size: 1.3em;
 	font-weight: bold;
 	width: 220px;
 	min-height: 2.2em;
@@ -487,7 +493,44 @@ body {
 	line-height: 1.7;
 	margin: 0;
 	padding: 0;
-	background: #f8fafc;
+	background: linear-gradient(120deg, #f8fafc 0%, #fbeee6 100%);
+	min-height: 100vh;
+	position: relative;
+	overflow-x: hidden;
+}
+body::before {
+	content: '';
+	position: fixed;
+	top: -200px;
+	left: -200px;
+	width: 600px;
+	height: 600px;
+	background: radial-gradient(circle at 30% 30%, #a259e6 0%, transparent 70%);
+	z-index: 0;
+	filter: blur(60px);
+	animation: float1 18s ease-in-out infinite alternate;
+	pointer-events: none;
+}
+body::after {
+	content: '';
+	position: fixed;
+	bottom: -200px;
+	right: -200px;
+	width: 600px;
+	height: 600px;
+	background: radial-gradient(circle at 70% 70%, #ff3e00 0%, transparent 70%);
+	z-index: 0;
+	filter: blur(60px);
+	animation: float2 22s ease-in-out infinite alternate;
+	pointer-events: none;
+}
+@keyframes float1 {
+	0% { transform: translateY(0) scale(1); }
+	100% { transform: translateY(80px) scale(1.08); }
+}
+@keyframes float2 {
+	0% { transform: translateY(0) scale(1); }
+	100% { transform: translateY(-80px) scale(1.08); }
 }
 h1, h2, h3, h4, h5, h6 {
 	font-family: 'Nunito', Arial, sans-serif;
@@ -621,13 +664,69 @@ p, li, .exp-list, .exp-desc {
 	/* margin-left: auto; removed for alignment */
 }
 @media (max-width: 1100px) {
-	.experience-flex {
+	.experience-flex, .projects-flex {
 		flex-direction: column;
 		align-items: center;
 	}
-	.exp-card {
+	.exp-card, .project-card, .shad-card {
 		width: 95vw;
 		max-width: 600px;
+	}
+}
+@media (max-width: 800px) {
+	nav ul {
+		gap: 1.2em;
+	}
+	nav a {
+		font-size: 1.3em;
+	}
+	.exp-card, .project-card, .shad-card {
+		padding: 1.2em 0.7em 1.2em 0.7em;
+		width: 98vw;
+		max-width: 99vw;
+	}
+	.bubble {
+		font-size: 1em;
+		width: 140px;
+		padding: 0.7em 0;
+	}
+	.bubble-belt-inner, .hobbies-belt-inner {
+		gap: 0.7em;
+	}
+	.skills-belt, .hobbies-belt {
+		margin: 1em 0 1.5em 0;
+	}
+	.profile-pic {
+		width: 120px;
+		height: 120px;
+		margin-left: 0;
+	}
+	.about-flex {
+		flex-direction: column;
+		align-items: center;
+		gap: 1.2em;
+	}
+	section h2 {
+		font-size: 2em;
+	}
+}
+@media (max-width: 500px) {
+	.exp-card, .project-card, .shad-card {
+		padding: 0.7em 0.2em 0.7em 0.2em;
+		width: 99vw;
+		max-width: 100vw;
+	}
+	.bubble {
+		font-size: 0.85em;
+		width: 90px;
+		padding: 0.4em 0;
+	}
+	.profile-pic {
+		width: 70px;
+		height: 70px;
+	}
+	section h2 {
+		font-size: 1.2em;
 	}
 }
 .projects-flex {
@@ -702,5 +801,70 @@ p, li, .exp-list, .exp-desc {
 	box-shadow: 0 6px 24px rgba(255,88,88,0.18), 0 1.5px 8px rgba(0,0,0,0.10);
 	transform: scale(1.08) rotate(-2deg);
 	background: linear-gradient(90deg, #ffc371 0%, #ff5858 100%);
+}
+.section-icon {
+	margin-right: 0.4em;
+	color: inherit;
+	font-size: 1.1em;
+	vertical-align: middle;
+	filter: drop-shadow(0 2px 4px #0001);
+}
+.bubble i {
+	margin-right: 0.4em;
+	font-size: 1em;
+	vertical-align: middle;
+}
+:root {
+	--bg: #f8fafc;
+	--bg-gradient: linear-gradient(120deg, #f8fafc 0%, #fbeee6 100%);
+	--card-bg: rgba(255,255,255,0.82);
+	--card-border: #e0e0e0;
+	--text: #222;
+	--accent: #ff3e00;
+	--bubble-bg: rgba(255,255,255,0.85);
+	--bubble-shadow: 0 2px 16px 0 rgba(31,38,135,0.13);
+}
+body {
+	background: var(--bg-gradient);
+	color: var(--text);
+}
+.dark-mode {
+	--bg: #181c24;
+	--bg-gradient: linear-gradient(120deg, #181c24 0%, #232946 100%);
+	--card-bg: rgba(30,34,44,0.92);
+	--card-border: #232946;
+	--text: #f8fafc;
+	--accent: #ffb86c;
+	--bubble-bg: rgba(30,34,44,0.92);
+	--bubble-shadow: 0 2px 16px 0 #0008;
+}
+body, .dark-mode {
+	background: var(--bg-gradient);
+	color: var(--text);
+}
+.exp-card, .project-card, .shad-card {
+	background: var(--card-bg);
+	border: 1.5px solid var(--card-border);
+	color: var(--text);
+}
+.bubble {
+	background: var(--bubble-bg);
+	box-shadow: var(--bubble-shadow);
+	color: var(--text);
+}
+.theme-toggle {
+	background: none;
+	border: none;
+	outline: none;
+	cursor: pointer;
+	font-size: 2em;
+	margin-left: 1.5em;
+	color: var(--accent);
+	transition: color 0.2s, transform 0.2s;
+	vertical-align: middle;
+}
+.theme-toggle:hover {
+	color: #a259e6;
+	transform: scale(1.15) rotate(-10deg);
 }
 </style>
