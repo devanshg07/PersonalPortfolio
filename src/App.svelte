@@ -7,7 +7,8 @@
 		{ id: 'experience', label: 'Experience' },
 		{ id: 'projects', label: 'Projects' },
 		{ id: 'hobbies', label: 'Hobbies' },
-		{ id: 'reachout', label: 'Reach Out!' }
+		{ id: 'reachout', label: 'Reach Out!' },
+		{ id: 'resume', label: 'Resume', external: true, url: 'https://docs.google.com/document/d/1ENQE7DyKBycYKb27E80NPjzEqrZV9eyk/edit' }
 	];
 
 	// Typewriter effect
@@ -76,7 +77,13 @@
 <nav>
 	<ul>
 		{#each sections as section}
-			<li><a href={'#' + section.id}>{section.label}</a></li>
+			<li>
+				{#if section.external}
+					<a href={section.url} target="_blank" rel="noopener">{section.label}</a>
+				{:else}
+					<a href={'#' + section.id}>{section.label}</a>
+				{/if}
+			</li>
 		{/each}
 	</ul>
 	<button class="theme-toggle" on:click={toggleDarkMode} aria-label="Toggle light/dark mode">
@@ -135,8 +142,9 @@
 				</div>
 				<h4 class="exp-company">CoolR Group</h4>
 				<ul class="exp-list">
-					<li>Developed and fine-tuned deep learning models (using PyTorch and TensorFlow) to automatically detect out-of-stock products and optimize inventory from images captured by IoT cameras in retail stores.</li>
-					<li>Collaborated with cross-functional teams to deploy ML models into production, integrating them with CoolR’s StoreAware SaaS platform for real-time analytics and actionable insight.</li>
+					<li>Effectively built a machine learning model to detect real-time empty industrial shelves by processing a visual dataset from an IoT sensor.</li>
+					<li>Cleaned a labeled dataset using Pandas and then applied data augmentation to train a YOLOv5 model by integrating PyTorch and OpenCV modules.</li>
+					<li>Successfully automated empty stock detection, hence decreasing shelf inspection by &gt;20% and increasing product availability.</li>
 				</ul>
 				<div class="exp-bubbles">
 					<span class="exp-bubble">PyTorch</span>
@@ -173,8 +181,9 @@
 					<h3 class="exp-title project-title">Vanilla Neural Network</h3>
 				</div>
 				<ul class="exp-list">
-					<li>Built a neural network from scratch in Python using only basic math, without any machine learning libraries.</li>
-					<li>Learned the fundamentals of forward/backward propagation and gradients by implementing all computations manually.</li>
+					<li>Computed a neural network to make predictions of a student’s GPA using 4 different independent variables without any external machine learning libraries.</li>
+					<li>Applied calculus and linear algebra concepts to implement the movement of neurons manually and calculate gradients and change network weights using optimization.</li>
+					<li>Received a final validation error of &lt;0.5, resulting in feasible and precise predictions of a student’s GPA.</li>
 				</ul>
 				<div class="exp-bubbles">
 					<span class="exp-bubble">Python</span>
@@ -203,8 +212,9 @@
 					<h3 class="exp-title project-title">CiviClinic</h3>
 				</div>
 				<ul class="exp-list">
-					<li>Developed an AI-powered healthcare app that lets users check symptoms with GPT, scan wounds using computer vision, and get matched to doctors or clinics nearby.</li>
-					<li>Built a modern Flask app with instant health assessments, smart injury analysis, and an interactive care map using Python, machine learning, and real medical data.</li>
+					<li>Created CiviClinic, an AI-powered web app designed to improve Canada’s healthcare system by reducing the number of unnecessary ER visits through machine learning based diagnosis and intelligent doctor matching.</li>
+					<li>Used TensorFlow and PyTorch libraries to diagnose a patient using image processing and NLP, and the OpenAI API Key to match patients with the correct doctors, and provide medical advice.</li>
+					<li>Reduced ER wait times by classifying non-critical patients using AI, ensuring that 1 in 7 unnecessary ER patients can take care of themselves without the need for medical support.</li>
 				</ul>
 				<div class="exp-bubbles">
 					<span class="exp-bubble">TensorFlow</span>
