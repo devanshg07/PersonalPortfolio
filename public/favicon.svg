@@ -1,0 +1,22 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" width="32" height="32">
+  <!-- Waving hand with motion lines -->
+  <g fill="#FF8C00" stroke="#FF6B00" stroke-width="2">
+    <!-- Hand shape -->
+    <path d="M30 60 L35 45 L40 40 L45 35 L50 30 L55 35 L60 40 L65 45 L70 60 L65 70 L60 75 L55 80 L50 85 L45 80 L40 75 L35 70 Z"/>
+    
+    <!-- Fingers -->
+    <path d="M30 60 L25 50 L20 45 L15 40 L10 35 L15 30 L20 25 L25 20 L30 25"/>
+    <path d="M40 75 L35 65 L30 60 L25 55 L20 50 L25 45 L30 40 L35 35 L40 40"/>
+    <path d="M50 85 L45 75 L40 70 L35 65 L30 60 L35 55 L40 50 L45 45 L50 50"/>
+    <path d="M60 75 L65 65 L70 60 L75 55 L80 50 L75 45 L70 40 L65 35 L60 40"/>
+    <path d="M70 60 L75 50 L80 45 L85 40 L90 35 L85 30 L80 25 L75 20 L70 25"/>
+  </g>
+  
+  <!-- Motion lines -->
+  <g stroke="#FF8C00" stroke-width="1.5" opacity="0.6">
+    <path d="M5 30 Q10 25 15 30" fill="none"/>
+    <path d="M85 30 Q90 25 95 30" fill="none"/>
+    <path d="M5 40 Q10 35 15 40" fill="none"/>
+    <path d="M85 40 Q90 35 95 40" fill="none"/>
+  </g>
+</svg> 

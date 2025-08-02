@@ -262,7 +262,7 @@
 	<section id="reachout">
 		<h2><i class="fa-solid fa-paper-plane fa-fw section-icon"></i> Reach Out!</h2>
 		<div class="reachout-links">
-			<a class="insta-link" href="https://instagram.com/devanshg07" target="_blank" rel="noopener">Instagram: @devanshg07</a>
+			<a class="insta-link" href="https://instagram.com/devansh.goyal__" target="_blank" rel="noopener">devansh.goyal__</a>
 			<a class="github-link" href="https://github.com/devanshg07" target="_blank" rel="noopener">GitHub: devanshg07</a>
 			<a class="linkedin-link" href="https://www.linkedin.com/in/devanshg07" target="_blank" rel="noopener">LinkedIn: Devanshg07</a>
 			<a class="email-link" href="https://mail.google.com/mail/?view=cm&to=devanshgoyal087@gmail.com" target="_blank" rel="noopener">Email: devanshgoyal087@gmail.com</a>
@@ -281,22 +281,29 @@ nav {
 	position: sticky;
 	top: 0;
 	z-index: 10;
+	overflow-x: auto;
+	margin-left: 2em;
+	margin-right: 1em;
 }
 nav ul {
 	display: flex;
-	gap: 2em;
+	gap: 0.8em;
 	list-style: none;
 	margin: 0;
-	padding: 0;
+	padding: 0 3em;
+	flex-wrap: wrap;
+	justify-content: center;
+	min-width: max-content;
 }
 nav a {
 	color: #ff3e00;
 	font-weight: bold;
 	text-decoration: none;
-	font-size: 2.5em;
+	font-size: 0.9em;
 	transition: color 0.2s, box-shadow 0.22s, transform 0.22s, background 0.22s;
 	border-radius: 0.5em;
-	padding: 0.1em 0.4em;
+	padding: 0.1em 0.3em;
+	white-space: nowrap;
 }
 nav a:hover, nav a:focus {
 	color: #a259e6;
@@ -684,16 +691,21 @@ p, li, .exp-list, .exp-desc {
 	}
 }
 @media (max-width: 800px) {
+	nav {
+		margin-left: 0.5em;
+		margin-right: 0.5em;
+	}
 	nav ul {
-		gap: 1.2em;
+		gap: 0.6em;
+		padding: 0 2em;
 	}
 	nav a {
-		font-size: 1.3em;
+		font-size: 1.4em;
+		padding: 0.1em 0.2em;
 	}
 	.exp-card, .project-card, .shad-card {
-		padding: 1.2em 0.7em 1.2em 0.7em;
-		width: 98vw;
-		max-width: 99vw;
+		width: 95vw;
+		max-width: 600px;
 	}
 	.bubble {
 		font-size: 1em;
@@ -720,7 +732,33 @@ p, li, .exp-list, .exp-desc {
 		font-size: 2em;
 	}
 }
+@media (max-width: 600px) {
+	nav {
+		margin-left: 0.3em;
+		margin-right: 0.3em;
+	}
+	nav ul {
+		gap: 0.4em;
+		padding: 0 1.5em;
+	}
+	nav a {
+		font-size: 1.2em;
+		padding: 0.1em 0.15em;
+	}
+}
 @media (max-width: 500px) {
+	nav {
+		margin-left: 0.2em;
+		margin-right: 0.2em;
+	}
+	nav ul {
+		gap: 0.3em;
+		padding: 0 1em;
+	}
+	nav a {
+		font-size: 1em;
+		padding: 0.1em 0.1em;
+	}
 	.exp-card, .project-card, .shad-card {
 		padding: 0.7em 0.2em 0.7em 0.2em;
 		width: 99vw;
